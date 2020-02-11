@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dim_16"
+                android:layout_marginTop="@dimen/dim_16"
+                android:text="Battery Information"
+                android:textAllCaps="true"
+                android:textColor="@color/dark_grey"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dim_16"
+                android:background="@drawable/border_round_coner_rectangle"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_cornor_fill_rectangle_grey">
+
+                    <EditText
+                        android:id="@+id/et_sku"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dim_54"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="Enter SKU"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grey" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim_10"
+                    android:background="@drawable/round_cornor_fill_rectangle_grey">
+
+                    <EditText
+                        android:id="@+id/et_size"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dim_54"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="Enter Size"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grey" />
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_brand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim_10"
+                    android:background="@drawable/round_cornor_fill_rectangle_grey"
+                    android:padding="@dimen/dim_16">
+
+                    <TextView
+                        android:id="@+id/tv_manufacturer_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Choose Brand"
+                        android:textAllCaps="true"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_brand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_manufacturer_tag"
+                        android:layout_marginTop="@dimen/dim_4"
+                        android:text="Select Brand"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="@dimen/dim_20"
+                        android:layout_height="@dimen/dim_20"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/icon_right_arrow_black_small" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dim_16"
+                android:layout_marginTop="@dimen/dim_4"
+                android:text="Product Image"
+                android:textAllCaps="true"
+                android:textColor="@color/dark_grey"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_add_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dim_16"
+                android:background="@drawable/border_round_coner_rectangle"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/img_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_200"
+                    android:src="@drawable/icon_photo_camera" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/loader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#6BCDCDCD"
+        android:clickable="true"
+        android:translationZ="18dp"
+        android:visibility="gone">
+
+        <ProgressBar
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

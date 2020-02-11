@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dim_16"
+                android:layout_marginTop="@dimen/dim_16"
+                android:text="Brand Information"
+                android:textAllCaps="true"
+                android:textColor="@color/dark_grey"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dim_16"
+                android:background="@drawable/border_round_coner_rectangle"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_cornor_fill_rectangle_grey">
+
+                    <EditText
+                        android:id="@+id/et_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dim_54"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="Enter Brand Name"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grey" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim_10"
+                    android:background="@drawable/round_cornor_fill_rectangle_grey"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dim_16"
+                        android:layout_marginTop="@dimen/dim_16"
+                        android:text="Status"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="14sp" />
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dim_12"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_active"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dim_40"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:checked="true"
+                            android:text="Active"
+                            android:textSize="16sp" />
+
+                        <RadioButton
+                            android:id="@+id/rb_inactive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dim_40"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="@dimen/dim_20"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:text="Inactive"
+                            android:textSize="16sp" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/loader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#6BCDCDCD"
+        android:clickable="true"
+        android:translationZ="18dp"
+        android:visibility="gone">
+
+        <ProgressBar
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

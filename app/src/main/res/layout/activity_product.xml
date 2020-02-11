@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.flipboard.bottomsheet.BottomSheetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomsheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_my_wallet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_grey_3">
+
+
+        <LinearLayout
+            android:id="@+id/linear_sort_filtert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:id="@+id/linear_sort"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dim_48"
+                android:layout_weight="0.5"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/dim_8"
+                    android:layout_height="@dimen/dim_8"
+                    android:background="@drawable/circle_color_primary" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/dim_4"
+                    android:drawableLeft="@drawable/sort_small"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Sort"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="50dp"
+                android:background="@color/grey" />
+
+            <LinearLayout
+                android:id="@+id/linear_filter"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dim_48"
+                android:layout_weight="0.5"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/img_filter_selected"
+                    android:layout_width="@dimen/dim_8"
+                    android:layout_height="@dimen/dim_8"
+                    android:background="@drawable/circle_color_primary"
+                    android:visibility="invisible" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dim_4"
+                    android:drawableLeft="@drawable/filter_small"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Filter"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_linear_sort_filtert"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/linear_sort_filtert"
+            android:background="@color/grey" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_my_transactions"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/dim_4"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_sort_filtert" />
+
+        <RelativeLayout
+            android:id="@+id/rl_list_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_header"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/dim_180"
+                android:layout_height="@dimen/dim_180"
+                android:layout_alignParentBottom="true"
+                app:srcCompat="@drawable/icon_empty_list" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/loader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#6BCDCDCD"
+            android:clickable="true"
+            android:translationZ="18dp"
+            android:visibility="gone">
+
+            <ProgressBar
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/more_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="bottom"
+            android:backgroundTint="@color/colorPrimary"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/colorPrimary"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+</com.flipboard.bottomsheet.BottomSheetLayout>

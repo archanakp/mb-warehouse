@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "117078411732",
+    "firebase_url": "https://battmobilewarehouse.firebaseio.com",
+    "project_id": "battmobilewarehouse",
+    "storage_bucket": "battmobilewarehouse.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:117078411732:android:6b99eb0918a8fe71bfee41",
+        "android_client_info": {
+          "package_name": "com.battmobile.battmobilewarehouse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "117078411732-lbuc49hud7f2a1b6fkuodrbe5m42t4vo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzkN4L7WlfYsfvBSUNK5gMwTkluIgxxFg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "117078411732-lbuc49hud7f2a1b6fkuodrbe5m42t4vo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
